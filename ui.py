@@ -12,12 +12,13 @@ from src.llm import TextInference, SQLExtractor
 from src.utils import PromptFormatterV1, get_data_from_query
 
 st.set_page_config(layout="wide")
-from config import connection_url, database_info_dict
+
+from config import connection_url, database_info_dict, model_name
 
 with st.spinner("Please wait loading model.."):
     try:
         inference_model = DonutInference(
-            model_pth="katanaml-org/invoices-donut-model-v1",
+            model_pth=model_name,
             device="cuda" if torch.cuda.is_available() else "cpu",
         )
         database_object = InvoiceDatabase(uri=connection_url)

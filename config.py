@@ -7,3 +7,8 @@ database_info_dict = {
     "database_type": "PostgreSQL",
     "password": None,
 }
+
+
+################## Models ##########################
+tokenizer_name = "Rajan/AIMT-invoices-donut"
+model_name = "Rajan/AIMT-invoices-donut"
