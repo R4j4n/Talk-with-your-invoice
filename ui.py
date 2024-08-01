@@ -12,13 +12,22 @@ from src.llm import TextInference, SQLExtractor
 from src.utils import PromptFormatterV1, get_data_from_query
 
 st.set_page_config(layout="wide")
-
-from config import connection_url, database_info_dict, model_name
+st.markdown(
+    """
+<div style="text-align: center;">
+    <span style="font-size: 20px; color: orange;">
+        🧾Query your invoices🧾
+    </span>
+</div>
+""",
+    unsafe_allow_html=True,
+)
+from config import connection_url, database_info_dict, model_name, model_name_base
 
 with st.spinner("Please wait loading model.."):
     try:
         inference_model = DonutInference(
-            model_pth=model_name,
+            model_pth=model_name_base,
             device="cuda" if torch.cuda.is_available() else "cpu",
         )
         database_object = InvoiceDatabase(uri=connection_url)
@@ -98,6 +107,8 @@ with col1:
                     # perform inference on image
                     dict_file = inference_model(image=img)
 
+                    print(dict_file)
+
                     # log the images to database
                     database_object.push_data(data=dict_file)
                 st.success("Invoices pushed to database.")
@@ -118,7 +129,7 @@ with col2:
             schema = db_agent.grab_table_schema(tables=tables)
             st.write(schema)
 
-        text = st.text_input("Please Enter your Queries:")
+        text = st.text_input("Please enter your queries here:")
 
         if st.button("Process"):
             formatter = PromptFormatterV1(tables=schema, db_type="PostgreSQL")

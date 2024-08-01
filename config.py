@@ -12,3 +12,4 @@ database_info_dict = {
 ################## Models ##########################
 tokenizer_name = "Rajan/AIMT-invoices-donut"
 model_name = "Rajan/AIMT-invoices-donut"
+model_name_base = "katanaml-org/invoices-donut-model-v1"
