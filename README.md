@@ -39,3 +39,12 @@ The edit distance $ D(\text{seq}_1, \text{seq}_2) $ is the minimum number of sin
 **Validation metric for 30 Epochs:**
 ![](static/val.png)
 
+
+**Train Loss for 10 Epochs:**
+
+![](static/train_10.png)
+
+**Validation metric for 10 Epochs:**
+![](static/val_10.png)
+
+
