@@ -10,6 +10,17 @@ database_info_dict = {
 
 
 ################## Models ##########################
-tokenizer_name = "Rajan/AIMT-invoices-donut"
-model_name = "Rajan/AIMT-invoices-donut"
+
+# model trained for 10 epochs
+tokenizer_name_10 = "Rajan/AIMT-invoices-donut_10Epochs"
+model_name_10 = "Rajan/AIMT-invoices-donut_10Epochs"
+
+
+# model trained for 30 epochs
+
+tokenizer_name_30 = "Rajan/AIMT-invoices-donut_30Epochs"
+model_name_30 = "Rajan/AIMT-invoices-donut_30Epochs"
+
+
+# base comparison model
 model_name_base = "katanaml-org/invoices-donut-model-v1"

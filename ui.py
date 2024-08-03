@@ -22,12 +22,12 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
-from config import connection_url, database_info_dict, model_name, model_name_base
+from config import connection_url, database_info_dict, model_name_30
 
 with st.spinner("Please wait loading model.."):
     try:
         inference_model = DonutInference(
-            model_pth=model_name_base,
+            model_pth=model_name_30,
             device="cuda" if torch.cuda.is_available() else "cpu",
         )
         database_object = InvoiceDatabase(uri=connection_url)

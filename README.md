@@ -1,7 +1,9 @@
 ## Talk with you invoice.
 
 
-**Model available at:**   [Huggingface 🤗](https://huggingface.co/Rajan/AIMT-invoices-donut)
+**10 Epochs Model available at:**   [Huggingface 10 epochs 🤗](https://huggingface.co/Rajan/AIMT-invoices-donut_10Epochs)
+**30 Epochs Model available at:**   [Huggingface 30 epochs 🤗](https://huggingface.co/Rajan/AIMT-invoices-donut_10Epochs)
+
 **Dataset available at:** [Huggingface 🤗](https://huggingface.co/datasets/Rajan/AIMT-invoices-donut-data)
 
 The dataset is in the format of [naver-clova-ix/cord-v2](https://huggingface.co/datasets/naver-clova-ix/cord-v2) dataset format. The dataset consists of invoices, which contains images and text annotations for OCR, and multi-level semantic labels for parsing. 
@@ -11,9 +13,7 @@ Dataset Source : [LINK](https://data.mendeley.com/datasets/tnj49gpmtz/2)
 
 **Dataset Sample:**
 
-**Train Loss:**
-
-![](static/train.png)
+![](static/data1.png)
 
 **Validation metric:**
 
@@ -32,6 +32,10 @@ where:
 The edit distance $ D(\text{seq}_1, \text{seq}_2) $ is the minimum number of single-character edits (insertions, deletions, or substitutions) required to transform $ \text{seq}_1 $ into $ \text{seq}_2 $.
 
 
+**Train Loss for 30 Epochs:**
 
+![](static/train.png)
+
+**Validation metric for 30 Epochs:**
 ![](static/val.png)
 
