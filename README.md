@@ -48,3 +48,14 @@ The edit distance $ D(\text{seq}_1, \text{seq}_2) $ is the minimum number of sin
 ![](static/val_10.png)
 
 
+
+**Models Comparison:**
+
+| Metric         | score_10_epochs | score_30_epochs | Score_Base |
+|----------------|-----------------|-----------------|------------|
+| mean_f1        | 0.230769        | 0.941176        | 0.961538   |
+| mean_accuracy  | 0.327561        | 0.927053        | 0.949793   |
+| mean_recall    | 0.230769        | 0.941176        | 0.961538   |
+| mean_precision | 0.230769        | 0.941176        | 0.961538   |
+
+
