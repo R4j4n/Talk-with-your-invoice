@@ -18,7 +18,7 @@ Dataset Source : [LINK](https://data.mendeley.com/datasets/tnj49gpmtz/2)
 **Validation metric:**
 
 The validation metric used here is normalized edit distance. 
-Normalized edit distance between two sequences $ \text{seq}_1 $ and $ \text{seq}_2 $ is calculated as:
+Normalized edit distance between two sequences $\text{seq}_1$ and $\text{seq}_**2**$ is calculated as:
 
 $$ 
 \text{Normalized Edit Distance} = \frac{D(\text{seq}_1, \text{seq}_2)}{\max(|\text{seq}_1|, |\text{seq}_2|)} 
